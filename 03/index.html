@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Reserva de Sociedad</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Reserva de Sociedad</h1>
+		<p>Rellena el siguiente formulario para reservar la sociedad para un día en concreto</p>
+		<form action="server.php" method="get">
+			<fieldset>
+				<legend>Datos del usuario</legend>
+				<label for="id-nombre">Nombre: </label>
+				<input type="text" name="nombre" id="id-nombre">
+				<p>¿Eres socio/a?</p>
+				<input type="radio" id="socia-S" name="socia" value="1" checked>
+				<label for="socia-S">Sí, soy socio/a </label> 
+				<input type="radio" id="socia-N" name="socia" value="0">
+				<label for="socia-N">No soy socio/a </label>
+				<br><br>
+				<label for="id-email">Email: </label>
+				<input type="email" name="email" id="id-email">
+				<br><br>
+				<label for="id-password">Contraseña: </label>
+				<input type="password" name="password" id="id-password">
+			</fieldset>
+			<fieldset>
+				<legend>Datos de la reserva:</legend>
+				<label for="id-edad">Edad </label>
+				<select id="id-edad" name="edad">
+ 					<option selected>Menor de 18</option>
+ 					<option>Entre 18 y 65</option>
+ 					<option>Mayor de 65</option>
+				</select>
+				<p>Selecciona la fecha y la hora de la reserva:</p>
+				<input type="date" name="fecha" id="id-fecha" value="dd/mm/aa">
+				<input type="time" name="hora" id="id-hora" value="--:--">
+				<br><br>
+				<textarea name="comentarios" rows="6" cols="30" placeholder="Comentarios"></textarea>
+			</fieldset>
+			<br>
+			<input type="checkbox" name="condiciones" id="id-condiciones" value="1">
+			<label for="id-condiciones">Acepto las condiciones</label>
+			<br><br>
+			<input type="submit" name="enviar" value="ENVIAR">
+		</form>
+	</body>
+</html>
